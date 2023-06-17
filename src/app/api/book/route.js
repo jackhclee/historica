@@ -16,7 +16,7 @@ const logger = winston.createLogger({
 export const GET = (req) => {
     const now = new Date()
     logger.info({msg: "hello", price: 100, ts: now});
-    return new NextResponse(JSON.stringify({msg: "hello", ts: now}), {
+    return new Response(JSON.stringify({msg: "hello", ts: now}), {
         headers: { 'content-type': 'application/json' },
       })
 }
