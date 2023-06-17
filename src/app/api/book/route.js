@@ -15,6 +15,5 @@ const logger = winston.createLogger({
 
 export const GET = (req) => {
     logger.info({msg: "hello", price: 100});
-
-    return NextResponse.json("Hello World");
+    return NextResponse.headers.set("Content-type","application/json").json("Hello World");
 }
