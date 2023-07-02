@@ -4,5 +4,8 @@ export const metadata = {
   }
 
 export default () => {
-    return (<div>About this website</div>)
+    return (<div>
+            About this website
+            {["china","france"].map(e => <div id={e} className="uppercase text-2xl font-bold">{e}</div>)}
+            </div>)
 }
